@@ -16,8 +16,8 @@ class Player:
 
         exe_dir = getattr(sys, '_MEIPASS', os.getcwd())
         
-        file_path = os.path.join(exe_dir, self.musica_objeto.file)
-
+        file_path = self.musica_objeto.endereco  # Corrigido para usar 'endereco'
+        
         pygame.mixer.music.load(file_path)
         
         pygame.mixer.music.play()
